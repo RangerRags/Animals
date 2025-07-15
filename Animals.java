@@ -23,7 +23,7 @@ public class Animals extends AnimalNoises {
 		
 		System.out.println("What is your Bird's age?");
 		bird.setAge(scanner.nextInt());
-		
+		scanner.close();
 	System.out.println(dog.getName()+" is "+ dog.getAge()+" years old and he goes " + dogNoise(dog));
 	
 	System.out.println(bird.getName()+" is "+ bird.getAge()+" years old and he goes "+ birdNoise(bird));
