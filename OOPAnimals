@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class Animals extends AnimalNoises {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		Dog dog = new Dog("", 0);
+		
+		Bird bird = new Bird("", 0);
+		
+		System.out.println("What is your dog's name?");
+		dog.setName(scanner.next());
+		
+		System.out.println("What is your dog's age?");
+		dog.setAge(scanner.nextInt());
+		
+		System.out.println("What is your Bird's name?");
+		bird.setName(scanner.next());
+		
+		System.out.println("What is your Bird's age?");
+		bird.setAge(scanner.nextInt());
+		
+	System.out.println(dog.getName()+" is "+ dog.getAge()+" years old and he goes " + dogNoise(dog));
+	
+	System.out.println(bird.getName()+" is "+ bird.getAge()+" years old and he goes "+ birdNoise(bird));
+		
+	}
+
+}
+public class AnimalNoises {
+
+	public static String dogNoise(Dog x) {
+		return  "Bark";
+	}
+	public static String birdNoise(Bird y) {
+		return  "Tweet";
+	}
+}
+
+public class Bird {
+private String name;
+private int age;
+	
+	public Bird(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+
+public class Dog {
+
+	private String name;
+	private int age;
+	
+	public Dog(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
